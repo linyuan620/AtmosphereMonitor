@@ -1,0 +1,188 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="20sp"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="上传间隔"
+            />
+        <Spinner
+            android:textSize="20sp"
+            android:id="@+id/sp_uploadInterval"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/form_padding">
+    </View>
+    <LinearLayout
+    android:orientation="horizontal"
+
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="20sp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="设备序号"
+        />
+
+    <EditText
+        android:textSize="20sp"
+        android:id="@+id/ed_equipmentId"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:maxLength="14"
+        android:hint="TM80D98E31DE0D"
+        android:inputType="text"
+        android:paddingLeft="@dimen/form_padding"  />
+
+</LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/form_padding">
+    </View>
+    <LinearLayout
+        android:orientation="horizontal"
+
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="20sp"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="IP地址"
+            />
+
+        <EditText
+            android:textSize="20sp"
+            android:id="@+id/ed_ipAddress"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:maxLength="15"
+            android:hint="58.210.116.142"
+            android:inputType="number"
+            android:digits="0123456789."
+            android:paddingLeft="@dimen/form_padding"  />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/form_padding">
+    </View>
+
+    <LinearLayout
+    android:orientation="horizontal"
+
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="20sp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="端口号"
+        />
+
+    <EditText
+        android:textSize="20sp"
+        android:id="@+id/ed_portAddress"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:maxLength="5"
+        android:hint="9666"
+        android:inputType="number"
+        android:paddingLeft="@dimen/form_padding"  />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/form_padding">
+    </View>
+    <LinearLayout
+        android:orientation="horizontal"
+
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="20sp"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="WIFI开关"
+            />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/sbWifiState"
+            style="@style/SwitchButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="@dimen/handle_button_margin_left"
+            android:layout_marginRight="@dimen/handle_button_margin_right"
+            android:layout_marginTop="@dimen/handle_button_margin_top"
+            android:layout_marginBottom="@dimen/handle_button_margin_bottom"
+            android:textSize="@dimen/nh3n_textSize"
+            app:kswTextOn="@string/switchOn"
+            app:kswTextOff="@string/switchOff" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/form_padding">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="wrap_content">
+
+        </View>
+
+        <Button
+            android:textSize="30sp"
+            android:id="@+id/btnConfirmConnectionConfig"
+            style="@style/toolButtonStyle"
+            android:text="保存" />
+
+        <View
+            android:layout_width="@dimen/form_padding"
+            android:layout_height="wrap_content">
+
+        </View>
+
+        <Button
+            android:textSize="30sp"
+            android:id="@+id/btnCancelConnectionConfig"
+            style="@style/toolButtonStyle"
+            android:text="取消" />
+
+    </LinearLayout>
+
+</LinearLayout>

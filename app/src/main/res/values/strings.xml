@@ -1,0 +1,237 @@
+<resources>
+    <string name="app_name">Monitor</string>
+    <string name="fg_notsupport">暂不支持</string>
+    <string name="title_activity_main">主窗体</string>
+    <string name="title_main">EAQM100S</string>
+    <string name="title_activity_maintain">仪表维护</string>
+    <string name="title_activity_login">权限校验</string>
+    <string name="title_activity_history">历史数据</string>
+    <string name="title_activity_log">运行日志</string>
+    <string name="title_activity_setting">参数设置</string>
+    <string name="title_activity_about">关于</string>
+    <string name="menu_exit">退出</string>
+    <string name="btnStartMeasure">启动</string>
+    <string name="btnStopMeasure">停止</string>
+    <string name="iExitConfirm">确定退出?</string>
+    <string name="equipment_usage">微型空气站</string>
+    <string name="chicken_blood_slogan">守卫我们共有的蓝天</string>
+    <string name="iConfirm">确定</string>
+    <string name="iCancel">取消</string>
+    <string name="e_HandControl">手动控制</string>
+    <string name="e_StepOperation">单步操作</string>
+    <string name="e_HandCalibrate">手动标定</string>
+    <string name="e_HandDebug">手动调试</string>
+    <string name="e_StandardCheck">标液审核</string>
+    <string name="e_ConnectionOut">外部通讯</string>
+    <string name="title_setting_valve">阀设置</string>
+    <string name="title_setting_pump">泵设置</string>
+    <string name="title_setting_injection">进样设置</string>
+    <string name="title_setting_measure">测量设置</string>
+    <string name="title_setting_connection">通讯设置</string>
+    <string name="title_setting_upload">上传设置</string>
+    <string name="title_setting_lightScreen">亮屏设置</string>
+    <string name="title_setting_measureUnit">测量单位</string>
+    <string name="title_setting_action">动作设置</string>
+    <string name="title_setting_calibrate">标定设置</string>
+    <string name="title_setting_flow">流程设置</string>
+    <string name="title_setting_about">关于</string>
+    <string name="pumpMoveOppositeDirection">反向</string>
+    <string name="pumpMoveForwardDirection">正向</string>
+    <string name="valveStart">打开</string>
+    <string name="valveStop">关闭</string>
+    <string name="sw_autoCalibrateOn">开启自动标定</string>
+    <string name="sw_autoCalibrateOff">关闭自动标定</string>
+    <string name="sw_firstLoopCalibrateOn">开启测量时标定</string>
+    <string name="sw_firstLoopCalibrateOff">关闭测量时标定</string>
+    <string name="switchOn">开</string>
+    <string name="switchOff">关</string>
+    <string name="add">添加</string>
+    <string name="delete">删除</string>
+    <string name="allTimes">全部</string>
+    <string name="currentAction">当前动作</string>
+    <string name="injectionInfoName">进样名称</string>
+    <string name="injectionInputPort">试剂输入端口</string>
+    <string name="injectionOutputPort">试剂输出端口</string>
+    <string name="injectionInfoHeight">取液高度</string>
+    <string name="voltageOriginal">初始光电压</string>
+    <string name="voltageFinal">最终光电压</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="splash_name">大气污染物采集软件V1.1</string>
+    <string name="devices_Model">EAQM-100S</string>
+    <string name="company_name">天瑞仪器</string>
+    <string name="company_info">skyray instrument</string>
+
+    <string name="open_wifi_hot">打开WIFI热点</string>
+    <string name="opening_wifi_hot">正在打开热点...</string>
+    <string name="close_wifi_hot">关闭WIFI热点</string>
+    <string name="closeing_wifi_hot">正在关闭热点...</string>
+
+    <string name="debug_readme">\t调试之前退出本app进程,通过第三方工具软件ComAssistent,
+        打开串口 /dev/ttyMT2,选中Hex发送,波特率9600,具体协议请参考天瑞\"扬尘与微型站通讯协议V1.0\"\n</string>
+    <string name="read_all">\t读取所有实时数据\n
+        Tx:01 04 00 00 00 15 31 C5 \n
+        Rx:01 04 2A 02 9A 00 00 00 00 00 AF 01 E6 03 EB 00 00 02 D0 02 26 00 55 00 00 00 34
+        00 00 00 03 00 00 00 2B 00 00 00 00 00 00 FD C5 00 00 CD 85 \n</string>
+    <string name="read_config">\t读取配置\n
+        Tx:03 00 00 00 04 44 09\n
+        Rx:03 08 03 78 00 02 00 01 00 01 C4 05\n</string>
+    <string name="read_tvoc">\t读取Tvoc数据\n
+        Tx:04 00 14 00 02 31 CF\n
+        Rx:04 04 00 00 00 00 FB 84\n</string>
+
+    <string name="read_pm">\t读取粉尘数据\n
+        Tx:04 00 06 00 03 50 0A\n
+        Rx:04 06 00 00 00 3B 00 30 11 4A\n</string>
+
+    <string-array name="PortName">
+        <item>COM1</item>
+        <item>COM2</item>
+        <item>COM3</item>
+    </string-array>
+
+    <string-array name="BaudRate">
+        <item>300</item>
+        <item>600</item>
+        <item>1200</item>
+        <item>2400</item>
+        <item>4800</item>
+        <item>9600</item>
+        <item>14400</item>
+        <item>19200</item>
+        <item>38400</item>
+        <item>56000</item>
+        <item>57600</item>
+        <item>115200</item>
+        <item>128000</item>
+        <item>256000</item>
+    </string-array>
+
+    <string-array name="IntervalTime">
+        <item>5</item>
+        <item>10</item>
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+        <item>300</item>
+    </string-array>
+
+    <string-array name="LightScreenTime">
+        <item>60</item>
+        <item>180</item>
+        <item>300</item>
+        <item>600</item>
+        <item>900</item>
+        <item>永不关屏</item>
+    </string-array>
+
+    <string-array name="pumpSpeed">
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+        <item>16</item>
+        <item>32</item>
+        <item>64</item>
+    </string-array>
+
+    <string-array name="pumpDir">
+        <item>正转</item>
+        <item>反转</item>
+    </string-array>
+
+    <string-array name="portNum">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="actionTypes">
+        <item>阀动作</item>
+        <item>泵动作</item>
+        <item>AD采样</item>
+        <item>等待时间</item>
+        <item>进样动作</item>
+    </string-array>
+
+    <string-array name="flowTypes">
+        <item>测量流程</item>
+        <item>维护动作</item>
+        <item>标定1</item>
+        <item>标定2</item>
+    </string-array>
+
+    <string-array name="heightTypes">
+        <item>低液位</item>
+        <item>高液位</item>
+        <item>满管</item>
+    </string-array>
+
+    <string name="edit">Edit</string>
+
+    <string-array name="samples">
+        <item>Top</item>
+        <item>Overlay</item>
+    </string-array>
+
+
+    <!--动作名称信息-->
+    <string-array name="actionNames">
+        <item>待测样</item>
+        <item>试剂一</item>
+        <item>试剂二</item>
+        <item>试剂三</item>
+        <item>试剂四</item>
+        <item>量标</item>
+        <item>零标</item>
+        <item>纯水</item>
+        <item>排废阀</item>
+        <item>消解管阀</item>
+        <item>上高压阀</item>
+        <item>下高压阀</item>
+        <item>消解风扇</item>
+        <item>采样泵</item>
+        <item>电磁阀1</item>
+        <item>电磁阀2</item>
+        <item>清空试剂</item>
+        <item>初始装液</item>
+        <item>试剂进样</item>
+        <item>蠕动泵</item>
+    </string-array>
+
+
+    <!--动作编码信息-->
+    <string-array name="actionTypeSNs">
+        <item>0x1100</item>
+        <item>0x1101</item>
+        <item>0x1102</item>
+        <item>0x1103</item>
+        <item>0x1104</item>
+        <item>0x1105</item>
+        <item>0x1106</item>
+        <item>0x1107</item>
+        <item>0x1108</item>
+        <item>0x1109</item>
+        <item>0x110a</item>
+        <item>0x110b</item>
+        <item>0x110c</item>
+        <item>0x110d</item>
+        <item>0x110e</item>
+        <item>0x110f</item>
+        <item>0x1210</item>
+        <item>0x1311</item>
+        <item>0x1412</item>
+        <item>0x1513</item>
+    </string-array>
+
+
+</resources>

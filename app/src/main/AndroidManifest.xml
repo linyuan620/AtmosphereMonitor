@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.skyray.atmospheremonitor">
+
+    <application
+        android:name=".SugarORMApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/eaqm_100s"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.skyray.atmospheremonitor.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTask">
+        </activity>
+
+        <service android:name="com.skyray.atmospheremonitor.WifiHotManager.WiFiAPService">
+        </service>
+
+        <meta-data
+            android:name="DATABASE"
+            android:value="EAQM100S.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="3" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+
+        <activity android:name=".ActivityMaintain"
+            android:label="@string/title_activity_maintain"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".ActivityLogin"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".ActivityHistory"
+            android:label="@string/title_activity_history"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".ActivityLog"
+            android:label="@string/title_activity_log"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".ActivityLogDetail"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".ActivityHistoryDetail"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".ActivitySetting"
+            android:label="@string/title_activity_setting"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".ActivityAbout"
+            android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!--如注释开机启动项,利用autoStart软件开机自启-->
+        <receiver android:name="com.skyray.atmospheremonitor.BroadcastReceiver.MyBroadcastReceive">
+　　        <intent-filter>
+　　           <action android:name="android.intent.action.BOOT_COMPLETED"/>
+　　        </intent-filter>
+　　    </receiver>
+
+        <!-- 声明关屏组件 -->
+        <receiver android:name="com.skyray.atmospheremonitor.BroadcastReceiver.YNAdminReceiver" >
+            <meta-data android:name="android.app.device_admin"
+                android:resource="@xml/yndeviceadmin"/>
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.USES_POLICY_FORCE_LOCK" />
+
+</manifest>

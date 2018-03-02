@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector  xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--点击背景-->
+    <item android:state_pressed="true">
+        <shape>
+            <!--色值e79429-->
+            <solid android:color="@color/accent"/>
+            <!--圆角-->
+            <corners android:radius="10dp"/>
+            <padding android:bottom="8dp" android:left="8dp"  android:right="8dp" android:top="8dp"></padding>
+        </shape>
+    </item>
+
+    <!--选中背景-->
+    <item android:state_focused="true">
+        <shape>
+            <!--色值e79429-->
+            <solid android:color="@color/accent"/>
+            <!--圆角-->
+            <corners android:radius="10dp"/>
+            <padding android:bottom="8dp" android:left="8dp"  android:right="8dp" android:top="8dp"></padding>
+        </shape>
+    </item>
+
+    <!--默认背景-->
+    <item android:state_enabled="false">
+        <shape>
+            <solid android:color="@color/color_button_disenabled"/>
+            <!--圆角-->
+            <corners android:radius="10dp"/>
+            <padding android:bottom="8dp" android:left="8dp"  android:right="8dp" android:top="8dp"></padding>
+        </shape>
+    </item>
+
+
+    <item >
+        <shape>
+            <solid android:color="@color/button_normal"/>
+            <!--圆角-->
+            <corners android:radius="10dp"/>
+            <padding android:bottom="8dp" android:left="8dp"  android:right="8dp" android:top="8dp"></padding>
+        </shape>
+    </item>
+
+</selector>
